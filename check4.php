@@ -96,9 +96,9 @@
 			if($notsurveyed == 1){
 				file_put_contents($lectureNo.'.txt', '['.$id.']'.$studentname.'('.$id.')'."\r\n", FILE_APPEND);
 			}
+			$lectureTXT = file_get_contents($lectureNo.'.txt');
 			for($other = 14001;$other < 14150;$other++){
 				if($other == $id) continue; // exclude self
-				$lectureTXT = file_get_contents($lectureNo.'.txt');
 				if(count(explode($other,$lectureTXT)) != 1){
 					$sameLectureList[$other] .= $lectureName . ', ';
 					$cnt[$other] += $lectureTime;
@@ -107,7 +107,6 @@
 			}
 			for($other = 15001;$other < 15150;$other++){
 				if($other == $id) continue; // exclude self
-				$lectureTXT = file_get_contents($lectureNo.'.txt');
 				if(count(explode($other,$lectureTXT)) != 1){
 					$sameLectureList[$other] .= $lectureName . ', ';
 					$cnt[$other] += $lectureTime;
@@ -117,6 +116,8 @@
 		}
 		ksort($cnt);
 		arsort($cnt, SORT_NUMERIC);
+		echo '* 시간 수가 아닌 학점 수로 계산됩니다.';
+		echo '<br />';
 		echo $studentname . '의 2016학년도 2학기 공통수강학생 정보';
 		echo '<br />';
 		echo '<button class="btn" data-clipboard-action="copy" data-clipboard-target="clipboardjs1"> 공통수강정보 복사</button>';
