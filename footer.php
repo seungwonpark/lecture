@@ -1,6 +1,7 @@
  <!-- /.container -->
 
 <!-- jQuery Version 1.11.1 -->
+<script src="static/js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
