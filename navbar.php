@@ -20,6 +20,9 @@
 				<li>
 					<a href="class.php"><s>반 배정 & 담임선생님 확인</s></a>
 				</li>
+				<li>
+					<a href="stat.php">조사 참여 통계</a>
+				</li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

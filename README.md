@@ -3,7 +3,7 @@
 
 * Based on : [PHP](http://php.net), [php**sec**lib](http://phpseclib.sourceforge.net/)
 
-* Also uses : [Bootstrap](http://getbootstrap.com/), [clipboard.js](https://clipboardjs.com/)
+* Also uses : [Bootstrap](http://getbootstrap.com/), [clipboard.js](https://clipboardjs.com/), [Google Chart API](https://developers.google.com/chart/)
 
 - Initiated by @hletrd
 

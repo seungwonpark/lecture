@@ -4,3 +4,6 @@ key.txt
 # Results
 *.txt
 teacherlist.html
+
+# Sublime Text SFTP configuration
+sftp-config.json
