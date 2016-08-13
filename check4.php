@@ -114,8 +114,14 @@
 				}
 			}
 		}
+		// github.com/seungwonpark/lecture/issues/3
+		$otherstudentname[14029] = '김태연';
+		
+		// sorting
 		ksort($cnt);
 		arsort($cnt, SORT_NUMERIC);
+		
+		// printing
 		echo '* 시간 수가 아닌 학점 수로 계산됩니다.';
 		echo '<br />';
 		echo $studentname . '의 2016학년도 2학기 공통수강학생 정보';
