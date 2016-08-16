@@ -49,13 +49,17 @@
 		$ireum = explode(' 학생',explode('<a class="brand" href="#left_songjuk">',$data)[1])[0];
 		
 		preg_match_all('/<td class="item1" ><a href="\/student\/score\/lectureInfo\.do\?lectureOpenNo=([0-9]+)/', $data, $match);
-
+		
+		$dir_list = scandir('./');
+		
 		foreach($match[1] as $each) {
 			curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/lectureInfo.do?lectureOpenNo=' . $each);
 			$data = curl_exec($ch);
 			$name = explode(' &gt; 개설교과 &gt; 경기과학고등학교</title>',explode('<title>',$data)[1])[0]; // 미분방정식(미분방정) -> 미분방정식
-			file_put_contents('lectures_' . $each . '.txt', explode('<!DOCTYPE html>', explode('<div id="content" class="span9" >', $data)[1])[0]);
 			
+			if(count(explode('lectures_' . $each . '.txt', $dir_list)) == 1){ // create new file only when file does not exists
+				file_put_contents('lectures_' . $each . '.txt', explode('<!DOCTYPE html>', explode('<div id="content" class="span9" >', $data)[1])[0]);
+			}
 			$list = explode('<td class="item2" >', $data);
 			
 			// $time = count(explode('<li><span class="strong">', $data)) - 1;  // 선생님이 2명 이상 등록되어 있으면 망함...
@@ -94,7 +98,7 @@
 		
 		// Print results
 		echo '* 학점 수가 아닌 강의시간 수로 계산됩니다.<br />';
-		echo $ireum . '(' . $id . ')의 2016학년도 1학기 공통수강학생 정보<br />';
+		echo $ireum . '(' . $id . ')의 2016학년도 2학기 공통수강학생 정보<br />';
 		echo '<button class="btn" data-clipboard-action="copy" data-clipboard-target="clipboardjs"> 정보 복사 </button>';
 		echo '<br />';
 		echo '<clipboardjs>';
