@@ -44,7 +44,7 @@
 		date_default_timezone_set("Asia/Seoul"); // 한국 시간대(KST)
 		file_put_contents('log2.txt',$id.'   '.date('Y').'.'.date('m').'.'.date('d').'.'.date('H').'.'.date('i').'.'.date('s')."\r\n",FILE_APPEND);
 		
-		curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/lectureList.do?schedule=1601');
+		curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/lectureList.do?schedule=1602');
 		$data = curl_exec($ch);	
 		$ireum = explode(' 학생',explode('<a class="brand" href="#left_songjuk">',$data)[1])[0];
 		

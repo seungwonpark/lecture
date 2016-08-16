@@ -57,7 +57,7 @@
 		// ㄴ> 이 학생이 듣는 강의의 번호들만을 수집. $data = graduation 어쩌구 일때 써야함!
 			
 			
-		curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/studentTimetable.do?schedule=1601');
+		curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/studentTimetable.do?schedule=1602');
 		$rawdata = curl_exec($ch);
 		$ireum = explode(' 학생',explode('<a class="brand" href="#left_songjuk">',$rawdata)[1])[0];
 		$data = explode('<h3 class="hidden" >강의 시간표</h3>',$rawdata)[1];	
