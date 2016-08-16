@@ -15,7 +15,10 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a href="check4.php">공통수강학생 확인</a>
+					<a href="check4.php">8.15 이전</a>
+				</li>
+				<li>
+					<a href="check.php">8.16 이후</a>
 				</li>
 				<li>
 					<a href="class.php"><s>반 배정 & 담임선생님 확인</s></a>

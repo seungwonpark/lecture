@@ -50,16 +50,14 @@
 		
 		preg_match_all('/<td class="item1" ><a href="\/student\/score\/lectureInfo\.do\?lectureOpenNo=([0-9]+)/', $data, $match);
 		
-		$dir_list = scandir('./');
-		
 		foreach($match[1] as $each) {
 			curl_setopt($ch, CURLOPT_URL, 'http://student.gs.hs.kr/student/score/lectureInfo.do?lectureOpenNo=' . $each);
 			$data = curl_exec($ch);
 			$name = explode(' &gt; 개설교과 &gt; 경기과학고등학교</title>',explode('<title>',$data)[1])[0]; // 미분방정식(미분방정) -> 미분방정식
 			
-			if(count(explode('lectures_' . $each . '.txt', $dir_list)) == 1){ // create new file only when file does not exists
-				file_put_contents('lectures_' . $each . '.txt', explode('<!DOCTYPE html>', explode('<div id="content" class="span9" >', $data)[1])[0]);
-			}
+			
+			// we don't need this at 2nd semester, because we won't use class.php
+			// file_put_contents('lectures_' . $each . '.txt', explode('<!DOCTYPE html>', explode('<div id="content" class="span9" >', $data)[1])[0]);
 			$list = explode('<td class="item2" >', $data);
 			
 			// $time = count(explode('<li><span class="strong">', $data)) - 1;  // 선생님이 2명 이상 등록되어 있으면 망함...
