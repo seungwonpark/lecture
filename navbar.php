@@ -18,7 +18,7 @@
 					<a href="check4.php">8.15 이전</a>
 				</li>
 				<li>
-					<a href="check.php">8.16 이후</a>
+					<a href="check.php"><s>8.16 이후</s> (미작동)</a>
 				</li>
 				<li>
 					<a href="class.php"><s>반 배정 & 담임선생님 확인</s></a>

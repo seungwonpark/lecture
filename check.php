@@ -115,6 +115,8 @@
 		echo '* 비밀번호는 서버에 저장되지 않으며 RSA Encryption되어 전송됩니다.<br />';
 		echo '* 각 강의별 학생 목록이 전체 통계 산출을 위해 수집됩니다.<br />';
 		echo '* 결과 산출에는 10초 이상 소요될 수 있습니다.<br />';
+		echo '그러니 제발 여러번 누르지 말아주세요...!!! ㅜㅜ <br/>';
+		echo '서버가 느릴 경우 500 Internal Server Error가 발생할 수 있습니다. 이 경우 다시 시도해주세요.';
 	}
 	require_once('footer.php');
 	?>
