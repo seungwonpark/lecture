@@ -19,7 +19,6 @@
 		}
 		include('Crypt/RSA.php');
 		$rsa = new Crypt_RSA();
-		$rsa_key_txt = file_get_contents('key.txt');
 		$rsa->loadKey(
 			array(
 				'e' => new Math_BigInteger('10001', 16),

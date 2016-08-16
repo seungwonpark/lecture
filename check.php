@@ -10,11 +10,10 @@
 	if (isset($_POST['id'])) {
 		include('Crypt/RSA.php');
 		$rsa = new Crypt_RSA();
-		$rsa_key_txt = file_get_contents('key.txt');
 		$rsa->loadKey(
 			array(
 				'e' => new Math_BigInteger('10001', 16),
-				'n' => new Math_BigInteger($rsa_key_txt, 16)
+				'n' => new Math_BigInteger('0xa84f535e7f4531973c4f966e2f0cac1594057ce2618bb7031ec46933638e03f6b8d08e2ef0a18d61605b13347f8648c2729596683dec96efb17c74635a4a3a0a71410ba42bdfcba51051e6213f7110926c16d4f40d570e4cc9d96a380a48d84a4aba9feffcf86f26434e20b55076eed4a8fcd67af3266f4453ec7cd72e47d127', 16)
 			)
 		);
 
