@@ -28,8 +28,16 @@
 				<li>
 					<a href="class.php"><s>반 배정 & 담임선생님 확인</s></a>
 				</li>
-				<li>
-					<a href="stat.php">조사 참여 통계</a>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">조사 참여 통계 <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="stat.php">공통수강학생</a>
+						</li>
+						<li>
+							<a href="stat2.php">공통공강학생</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</div>
