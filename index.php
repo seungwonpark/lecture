@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1> <?php echo date('Y'); ?>.2학기 공통수강학생 확인 </h1>
+                <h1> <?php echo date('Y'); ?>.2학기 공통수강/공강학생 확인 </h1>
 				<h4> 상단바를 눌러 이동하세요. (눌리지 않던 버그 수정됨) </h4>
             </div>
         </div>
